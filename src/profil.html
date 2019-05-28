@@ -16,6 +16,24 @@
         <a href="index.html"><h1>La monde est chiant, parce que ....</h1></a>
         <button class="button button--newPost">Ajouter</button>
       </div>
+      <div class="post--new">
+        <form action="" method="get" class="form">
+          <div class="form__field">
+            <label for="story">Enter ton chiant histoire: </label>
+            <textarea type="text" name="story" id="story" required>
+          </div>
+          <div class="form__line">
+            <label for="tags">Enter des Tags (sepere par virgule): </label>
+            <input type="text" name="tags" id="tags" required>
+          </div>
+          <div class="form__button">
+            <input type="imageupload" value="Upload un image">
+          </div>
+          <div class="form__button">
+            <input type="submit" value="Send" class="button--sendPost">
+          </div>
+        </form>
+      </div>
     </header>
     <button class="button--circle button--nav"></button>
     <img src="img/mec.png" alt="" class="mec hidden-xs">
@@ -65,7 +83,7 @@
               </div>
               <div class="post__content">
                 <p class="post__content__text">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu<span>Comment pas ouvert | Si on click sure le comment on peux voir des comments</span>
+                  .... Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu<span>Comment pas ouvert | Si on click sure le comment on peux voir des comments</span>
                 </p>
 
                 <div class="post__button--comment">
@@ -113,7 +131,7 @@
               </div>
               <div class="post__content">
                 <p class="post__content__text">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu <span>Comment ouvert | Si on click sure le comment on peux ferme des comments</span>
+                  .... Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu <span>Comment ouvert | Si on click sure le comment on peux ferme des comments</span>
                 </p>
 
                 <div class="post__button--comment">
@@ -174,10 +192,10 @@
                     </header>
                     <main class="comment__content">
                       <form action="" method="get" class="form form--comment">
-                        <div class="form--comment__field">
+                        <div class="form__field">
                           <textarea type="text" name="comment" id="name" required>
                         </div>
-                        <div class="form--comment__button">
+                        <div class="form__button">
                           <input type="submit" value="Ok">
                         </div>
                       </form>

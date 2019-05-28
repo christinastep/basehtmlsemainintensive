@@ -23,18 +23,18 @@
       <div class="post--new">
         <form action="" method="get" class="form">
           <div class="form__field">
-            <label for="name">Enter ton chiant histoire: </label>
-            <textarea type="text" name="comment" id="name" required="">
+            <label for="story">Enter ton chiant histoire: </label>
+            <textarea type="text" name="story" id="story" required="">
           </textarea></div>
           <div class="form__line">
-            <label for="name">Enter des Tags (sepere par virgule): </label>
-            <input type="text" name="comment" id="name" required="">
+            <label for="tags">Enter des Tags (sepere par virgule): </label>
+            <input type="text" name="tags" id="tags" required="">
           </div>
           <div class="form__button">
             <input type="imageupload" value="Upload un image">
           </div>
           <div class="form__button">
-            <input type="submit" value="Send">
+            <input type="submit" value="Send" class="button--sendPost">
           </div>
         </form>
       </div>
@@ -81,7 +81,7 @@
               </div>
               <div class="post__content">
                 <p class="post__content__text">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu<span>Comment pas ouvert | Si on click sure le comment on peux voir des comments</span>
+                  .... Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu<span>Comment pas ouvert | Si on click sure le comment on peux voir des comments</span>
                 </p>
 
                 <div class="post__button--comment">
@@ -129,7 +129,7 @@
               </div>
               <div class="post__content">
                 <p class="post__content__text">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu <span>Comment ouvert | Si on click sure le comment on peux ferme des comments</span>
+                  .... Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu <span>Comment ouvert | Si on click sure le comment on peux ferme des comments</span>
                 </p>
 
                 <div class="post__button--comment">
@@ -232,7 +232,7 @@
               </div>
               <div class="post__content">
                 <p class="post__content__text">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu
+                  .... Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu
                 </p>
 
                 <figure class="post__content__image">
@@ -262,6 +262,7 @@
     </div>
 
     <div class="popup">
+      <button class="button--circle botton--close"></button>
       <!-- Connecte toi bubble
       <div class="popup__content popup__content--login">
         <h2 class="popup__headline">Connectes toi !!!!!</h2>
@@ -285,13 +286,14 @@
         <p class="textLink">Cree un compte</p>
       </div>
       -->
+      
 
       <!-- Cree un compte -->
       <div class="popup__content popup__content--login">
         <h2 class="popup__headline">Cree un compte !!!!!</h2>
         <p class="popup__text">
           Cree un compte pour profiter des tout le functionalite du site.
-          <span class="popup__text popup__text--error"><!-- Message d'error --></span>
+          <span class="popup__text popup__text--error"></span>
         </p>
         <form action="" method="get" class="form form--login">
           <div class="form__line">
@@ -299,15 +301,12 @@
             <input type="text" name="username" id="username" required="">
           </div>
           <div class="form__line">
+            <label for="email">Enter ton mot des Email : </label>
+            <input type="email" name="email" id="email" required="">
+          </div>
+          <div class="form__line">
             <label for="password">Enter ton mot des password : </label>
             <input type="password" name="password" id="password" required="">
-          </div>
-          <div class="form__field">
-            <label for="username_text">Enter un petit description : </label>
-            <textarea type="text" name="username_text" id="username_text" required="">
-          </textarea></div>
-          <div class="form__button">
-            <input type="imageupload" value="Upload un image">
           </div>
           <div class="form__button">
             <input type="submit" value="Send">

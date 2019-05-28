@@ -176,6 +176,7 @@ span {
 @media (max-width: 749px) {
   .header {
     padding: 10px 20px;
+    height: 100px;
   }
 }
 .header h1 {
@@ -191,6 +192,7 @@ span {
 .header button {
   padding: 5px 15px;
   transition: all 0.3s;
+  cursor: pointer;
 }
 .header.header__newpost--open {
   height: 80vh;
@@ -200,6 +202,7 @@ span {
 .header__main {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .button {
@@ -243,8 +246,14 @@ span {
 
 .post__header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 750px) {
+  .post__header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .post__header .post__header__info {
   display: flex;
@@ -275,6 +284,11 @@ span {
 }
 .post__header .post__header__edit {
   display: flex;
+}
+@media (max-width: 749px) {
+  .post__header .post__header__edit {
+    justify-content: flex-end;
+  }
 }
 .post__header .post__header__edit p {
   margin-left: 5px;
@@ -485,6 +499,7 @@ span {
   margin-top: 10px;
   text-transform: uppercase;
   text-align: center;
+  cursor: pointer;
 }
 .form .form__line input {
   padding: 10px;
@@ -647,6 +662,7 @@ span {
   }
 }
 .sidebar--profil .profilInfoBox .botton--edit {
+  cursor: pointer;
   background-image: url(stilo.9a4fc04d.png);
   background-size: 50%;
   width: 40px;
@@ -749,11 +765,28 @@ span {
   align-items: center;
   justify-content: center;
   padding: 50px;
+  bottom: -100%;
+  translate: bottom 0.5s;
+}
+@media (max-width: 749px) {
+  .popup {
+    padding: 30px;
+    right: 20px;
+    left: 20px;
+    height: calc(100vh - 180px);
+  }
+  .popup.active {
+    bottom: 60px;
+    translate: bottom 0.5s;
+  }
 }
 @media (min-width: 750px) {
   .popup {
-    bottom: 70px;
     right: 120px;
+  }
+  .popup.active {
+    bottom: 70px;
+    translate: bottom 0.5s;
   }
   .popup:after {
     content: "";
@@ -766,11 +799,23 @@ span {
     border-top: 30px solid #000;
   }
 }
-.popup .popup__content {
-  width: 400px;
+@media (min-width: 750px) {
+  .popup .popup__content {
+    width: 400px;
+  }
 }
 .popup .popup__content .popup__headline {
   font-family: "Pirata One", cursive;
   font-size: 3em;
   margin-bottom: 5px;
+}
+.popup .botton--close {
+  cursor: pointer;
+  background-image: url(cross.bc548973.png);
+  background-size: 50%;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -20px;
+  right: -20px;
 }

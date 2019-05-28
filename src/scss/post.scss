@@ -38,8 +38,12 @@
 
 .post__header{
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  @include sm-min {
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .post__header__info{
     @include sm-min {
       width: 50%;
@@ -66,6 +70,9 @@
     }
   }
   .post__header__edit{
+    @include xs-max {
+      justify-content: flex-end;
+    }
     display: flex;
     p{
       margin-left: 5px;
@@ -275,6 +282,7 @@
       margin-top: 10px; 
       text-transform: uppercase;
       text-align: center;
+      cursor: pointer;
     }
   }
   .form__line{

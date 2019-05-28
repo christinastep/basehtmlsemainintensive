@@ -6,8 +6,24 @@
   align-items: center;
   justify-content: center;
   padding:50px;
+  bottom:-100%;
+  translate: bottom 0.5s;
+
+  @include xs-max {
+    padding:30px;
+    right:20px;
+    left:20px;
+    height:calc(100vh - 180px);
+    &.active{
+      bottom: 60px;
+      translate: bottom 0.5s;
+    }
+  }
   @include sm-min {
-    bottom: 70px;
+    &.active{
+      bottom: 70px;
+      translate: bottom 0.5s;
+    }
     right: 120px;
     &:after{
       content: "";
@@ -21,12 +37,23 @@
     }
   }
   .popup__content{
-    width: 400px;
+    @include sm-min {
+      width: 400px;
+    }
     .popup__headline{
       font-family: 'Pirata One', cursive;
       font-size: 3em;
       margin-bottom: 5px;
     }
   }
-
+  .botton--close{
+    cursor: pointer;
+    background-image: url(../img/cross.png);
+    background-size: 50%;
+    width:40px;
+    height:40px;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+  }
 }

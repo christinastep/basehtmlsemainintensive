@@ -10,6 +10,7 @@
   height:70px;
   @include xs-max {
     padding:10px 20px;
+    height: 100px;
   }
   h1{
     font-family: 'Pirata One', cursive;
@@ -22,6 +23,7 @@
   button{
     padding:5px 15px;
     transition: all 0.3s;
+    cursor: pointer;
   }
   &.header__newpost--open{
     height:80vh;
@@ -32,4 +34,5 @@
 .header__main{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
