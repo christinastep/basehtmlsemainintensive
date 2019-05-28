@@ -12,8 +12,10 @@
   </head>
   <body class="">
     <header class="header">
-      <a href="index.html"><h1>La monde est chiant, parce que ....</h1></a>
-      <button class="button">Ajouter</button>
+      <div class="header__main">
+        <a href="index.html"><h1>La monde est chiant, parce que ....</h1></a>
+        <button class="button button--newPost">Ajouter</button>
+      </div>
     </header>
     <button class="button--circle button--nav"></button>
     <img src="img/mec.png" alt="" class="mec hidden-xs">
@@ -171,7 +173,7 @@
                       <p class="comment__header__author">Ecrit un</p>
                     </header>
                     <main class="comment__content">
-                      <form action="" method="get" class="form--comment">
+                      <form action="" method="get" class="form form--comment">
                         <div class="form--comment__field">
                           <textarea type="text" name="comment" id="name" required>
                         </div>

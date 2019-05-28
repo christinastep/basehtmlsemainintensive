@@ -1,13 +1,12 @@
 .header{
-  display: flex;
   width: 100vw;
-  justify-content: space-between;
   padding: 1vw 3vw;
   position: fixed;
   z-index: 10;
   border-bottom: $border--main;
   background-color: #fff;
   align-items: center;
+  transition: all .5s;
   @include xs-max {
     padding:10px 20px;
   }
@@ -23,4 +22,9 @@
     padding:5px 15px;
     transition: all 0.3s;
   }
+}
+
+.header__main{
+  display: flex;
+  justify-content: space-between;
 }

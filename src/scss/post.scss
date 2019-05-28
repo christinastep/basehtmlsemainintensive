@@ -254,7 +254,7 @@
   }
 }
 
-.form--comment{
+.form{
   .form--comment__field{
     width: 100%;
     textarea{
@@ -274,6 +274,45 @@
       font-size: 1em;
       margin-top: 10px; 
       text-transform: uppercase;
+      text-align: center;
     }
   }
+  .form--comment__tag{
+    input{
+      border: $border--main;
+      font-weight: bold;
+      width: 100%;
+      outline: none;
+      font-size: 1em;
+      text-transform: uppercase;
+    }
+  }
+  label{
+    font-weight: bold;
+    margin-top: 0px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
 }
+
+
+.post--new{
+  display: none;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  @include sm-min {
+    max-width: 720px;
+    margin-left:200px;
+  }
+
+  @include lg-min {
+    margin-left: 320px;
+  }
+  
+  &.active{
+    display: block;
+  }
+}
+
