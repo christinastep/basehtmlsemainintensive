@@ -15,22 +15,26 @@
       <div class="header__main">
         <a href="/index.html"><h1>La monde est chiant, parce que ....</h1></a>
         <button class="button button--newPost">Ajouter</button>
+        <!-- 
+          Si User est pas conecter 
+          <button class="button button--newPost">Sign In</button> 
+        -->
       </div>
       <div class="post--new">
         <form action="" method="get" class="form">
-          <div class="form--comment__field">
+          <div class="form__field">
             <label for="name">Enter ton chiant histoire: </label>
             <textarea type="text" name="comment" id="name" required="">
           </textarea></div>
-          <div class="form--comment__tag">
+          <div class="form__line">
             <label for="name">Enter des Tags (sepere par virgule): </label>
             <input type="text" name="comment" id="name" required="">
           </div>
-          <div class="form--comment__button">
+          <div class="form__button">
             <input type="imageupload" value="Upload un image">
           </div>
-          <div class="form--comment__button">
-            <input type="submit" value="Ok">
+          <div class="form__button">
+            <input type="submit" value="Send">
           </div>
         </form>
       </div>
@@ -186,10 +190,10 @@
                     </header>
                     <main class="comment__content">
                       <form action="" method="get" class="form form--comment">
-                        <div class="form--comment__field">
+                        <div class="form__field">
                           <textarea type="text" name="comment" id="name" required="">
                         </textarea></div>
-                        <div class="form--comment__button">
+                        <div class="form__button">
                           <input type="submit" value="Ok">
                         </div>
                       </form>
@@ -255,6 +259,62 @@
           </div>
         </main>
       </section>
+    </div>
+
+    <div class="popup">
+      <!-- Connecte toi bubble
+      <div class="popup__content popup__content--login">
+        <h2 class="popup__headline">Connectes toi !!!!!</h2>
+        <p class="popup__text">
+          Conectez toi pour profiter des tout le functionalite du site.
+          <span class="popup__text popup__text--error"></span>
+        </p>
+        <form action="" method="get" class="form form--login">
+          <div class="form__line">
+            <label for="username">Enter ton Username : </label>
+            <input type="text" name="username" id="username" required>
+          </div>
+          <div class="form__line">
+            <label for="password">Enter ton mot des password : </label>
+            <input type="password" name="password" id="password" required>
+          </div>
+          <div class="form__button">
+            <input type="submit" value="Send">
+          </div>
+        </form>
+        <p class="textLink">Cree un compte</p>
+      </div>
+      -->
+
+      <!-- Cree un compte -->
+      <div class="popup__content popup__content--login">
+        <h2 class="popup__headline">Cree un compte !!!!!</h2>
+        <p class="popup__text">
+          Cree un compte pour profiter des tout le functionalite du site.
+          <span class="popup__text popup__text--error"><!-- Message d'error --></span>
+        </p>
+        <form action="" method="get" class="form form--login">
+          <div class="form__line">
+            <label for="username">Enter ton Username : </label>
+            <input type="text" name="username" id="username" required="">
+          </div>
+          <div class="form__line">
+            <label for="password">Enter ton mot des password : </label>
+            <input type="password" name="password" id="password" required="">
+          </div>
+          <div class="form__field">
+            <label for="username_text">Enter un petit description : </label>
+            <textarea type="text" name="username_text" id="username_text" required="">
+          </textarea></div>
+          <div class="form__button">
+            <input type="imageupload" value="Upload un image">
+          </div>
+          <div class="form__button">
+            <input type="submit" value="Send">
+          </div>
+        </form>
+      </div>
+
     </div>
     <script src="/script.d573be0b.js"></script>
   </body>

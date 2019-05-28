@@ -1,0 +1,32 @@
+.popup{
+  position: fixed;
+  border: $border--main;
+  background-color: lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:50px;
+  @include sm-min {
+    bottom: 70px;
+    right: 120px;
+    &:after{
+      content: "";
+      width: 0; 
+      height: 0; 
+      position: absolute;
+      bottom:-30px;
+      right:10px;
+      border-left: 50px solid transparent;
+      border-top: 30px solid #000;
+    }
+  }
+  .popup__content{
+    width: 400px;
+    .popup__headline{
+      font-family: 'Pirata One', cursive;
+      font-size: 3em;
+      margin-bottom: 5px;
+    }
+  }
+
+}

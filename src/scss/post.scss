@@ -255,7 +255,7 @@
 }
 
 .form{
-  .form--comment__field{
+  .form__field{
     width: 100%;
     textarea{
       border: $border--main;
@@ -265,7 +265,7 @@
       font-weight: bold;
     }
   }
-  .form--comment__button{
+  .form__button{
     input{
       border: $border--main;
       border-radius: 20vw;
@@ -277,8 +277,9 @@
       text-align: center;
     }
   }
-  .form--comment__tag{
+  .form__line{
     input{
+      padding:10px;
       border: $border--main;
       font-weight: bold;
       width: 100%;

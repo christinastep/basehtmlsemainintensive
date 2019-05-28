@@ -4,4 +4,5 @@ document.querySelector(".button--nav").addEventListener("click", function(){
 
 document.querySelector(".button--newPost").addEventListener("click", function(){
   document.querySelector(".post--new").classList.toggle("active");
+  document.querySelector(".header").classList.toggle("header__newpost--open");
 });

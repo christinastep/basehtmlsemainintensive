@@ -156,6 +156,12 @@ span {
   color: red;
 }
 
+.textLink {
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 20px;
+}
+
 .header {
   width: 100vw;
   padding: 1vw 3vw;
@@ -165,6 +171,7 @@ span {
   background-color: #fff;
   align-items: center;
   transition: all 0.5s;
+  height: 70px;
 }
 @media (max-width: 749px) {
   .header {
@@ -184,6 +191,10 @@ span {
 .header button {
   padding: 5px 15px;
   transition: all 0.3s;
+}
+.header.header__newpost--open {
+  height: 80vh;
+  transition: all 0.5s;
 }
 
 .header__main {
@@ -455,17 +466,17 @@ span {
   margin-left: 10%;
 }
 
-.form .form--comment__field {
+.form .form__field {
   width: 100%;
 }
-.form .form--comment__field textarea {
+.form .form__field textarea {
   border: solid 5px black;
   width: 100%;
   font-size: 1em;
   padding: 10px;
   font-weight: bold;
 }
-.form .form--comment__button input {
+.form .form__button input {
   border: solid 5px black;
   border-radius: 20vw;
   font-weight: bold;
@@ -475,7 +486,8 @@ span {
   text-transform: uppercase;
   text-align: center;
 }
-.form .form--comment__tag input {
+.form .form__line input {
+  padding: 10px;
   border: solid 5px black;
   font-weight: bold;
   width: 100%;
@@ -727,4 +739,38 @@ span {
 .main--profil__nav button.active {
   background-color: #000;
   color: #fff;
+}
+
+.popup {
+  position: fixed;
+  border: solid 5px black;
+  background-color: lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+@media (min-width: 750px) {
+  .popup {
+    bottom: 70px;
+    right: 120px;
+  }
+  .popup:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -30px;
+    right: 10px;
+    border-left: 50px solid transparent;
+    border-top: 30px solid #000;
+  }
+}
+.popup .popup__content {
+  width: 400px;
+}
+.popup .popup__content .popup__headline {
+  font-family: "Pirata One", cursive;
+  font-size: 3em;
+  margin-bottom: 5px;
 }
