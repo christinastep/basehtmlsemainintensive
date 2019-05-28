@@ -1,0 +1,157 @@
+.sidebar{
+  padding-top: 20px;
+  @include xs-max {
+    &.sidebar--post{
+      position: fixed;
+      transition: bottom .3s;
+      bottom:-100%;
+      z-index: 9;
+      height: 340px;
+      width: 100vw;
+      background-color: #fff;
+      margin-left: -20px;
+      padding-left: 10px;
+      padding-top: 10%;
+      border-top: $border--main;
+    }
+  }
+  &.active{
+    bottom:0px;
+  }
+
+  // Post //
+  .sidebar__filter{
+    width: calc(100% - 20px);
+    @include sm-min {
+      width: 200px;
+      margin-left: 3vw;
+    }
+    @include lg-min {
+      width: 280px;
+    }
+    background-color: #fff;
+    position: fixed;
+    .searchbar{
+      width: 100%;
+      border: $border--main;
+      border-radius: 20vw;
+      padding:5px;
+      font-weight: bold;
+      text-align: center;
+      font-size: 1em;
+      background-image: url(../img/luppe.png);
+      background-repeat: no-repeat;
+      background-position: right 5px center;
+      margin-bottom: 10px;
+      &:focus{
+        outline: none;
+      }
+    }
+    button{
+      margin-bottom: 5px;
+      padding:5px 15px;
+      transition: all 0.3s;
+      &:hover{
+        background-color: #000;
+        color: #fff;
+      }
+      &.button--commit{
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.button--circle{
+  position: fixed;
+  bottom:10px;
+  border:$border--main;
+  border-radius: 50%;
+  width: 50%;
+  background-color: #fff;
+  z-index: 10;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+  &.button--nav{
+    right:10px;
+    width:40px;
+    height:40px;
+    background-image: url(../img/nav.png);
+    background-size: 50%; 
+    @include sm-min {
+      display: none;
+      
+    }
+  }
+  &.button--profil{
+    cursor: pointer;
+    width:60px;
+    height:60px;
+    background-image: url(../img/image.png);
+    background-size: cover;
+    left:3vw;
+    @include xs-max {
+      position: absolute;
+      bottom: 20px;
+    }
+  }
+}
+
+
+ // Profil //
+
+ .sidebar--profil{
+   display: flex;
+   justify-content: center;
+   @include sm-min {
+     position: fixed;
+   }
+  .profilInfoBox{
+    width: 200px;
+    position: relative;
+    @include xs-max {
+      margin-top: 50px;
+    }
+    .botton--edit{
+      background-image: url(../img/stilo.png);
+      background-size: 50%;
+      width:40px;
+      height:40px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      @include sm-min {
+        right:-20px;
+      }
+    }
+    .profilInfoBox__image{
+      border-radius: 50%;
+      border: $border--main;
+      overflow: hidden;
+      width:200px;
+      position: relative;
+      height:200px;
+      @include xs-max {
+        width:100px;
+        height:100px;
+        margin: 0 auto;
+      }
+      img{
+        height: 100%;
+      }
+    }
+    .profilInfoBox__headline{
+      text-align: center;
+      margin-top: 20px;
+      font-size: 2em;
+      font-family: 'Pirata One', cursive;
+
+    }
+    .profilInfoBox__text{
+      margin-top: 10px;
+      text-align: center;
+    }
+  }
+ }
