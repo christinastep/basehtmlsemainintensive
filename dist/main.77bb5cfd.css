@@ -313,6 +313,7 @@ span {
   display: flex;
   flex-direction: column;
   border-bottom: solid 5px black;
+  padding-bottom: 30px;
 }
 @media (min-width: 750px) {
   .post__wrapper .post__content {
