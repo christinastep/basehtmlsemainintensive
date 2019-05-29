@@ -90,4 +90,11 @@ span{
   font-weight: bold;
   text-decoration: underline;
   margin-top: 20px;
+  font-size: 0.9em;
+  width: 100%;
+  display: block;
+  text-align: right;
+  @include sm-min {
+    margin-top: -10px;
+  }
 }

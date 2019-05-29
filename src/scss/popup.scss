@@ -5,25 +5,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding:50px;
-  bottom:-100%;
+  padding:40px;
   translate: bottom 0.5s;
 
+ 
+
   @include xs-max {
+    position: relative;
     padding:30px;
-    right:20px;
-    left:20px;
-    height:calc(100vh - 180px);
-    &.active{
-      bottom: 60px;
-      translate: bottom 0.5s;
-    }
+    width: 100%;
+    margin-top: 120px;
+  }
+  @media (max-width:320px) {
+    padding:20px 10px;
   }
   @include sm-min {
-    &.active{
-      bottom: 70px;
-      translate: bottom 0.5s;
-    }
+    bottom: 70px;
+    translate: right 0.5s;
     right: 120px;
     &:after{
       content: "";
@@ -44,6 +42,10 @@
       font-family: 'Pirata One', cursive;
       font-size: 3em;
       margin-bottom: 5px;
+      @media (max-width:320px) {
+        font-size: 2.3em;
+        margin-bottom: 10px;
+      }
     }
   }
   .botton--close{
@@ -55,5 +57,25 @@
     position: absolute;
     top: -20px;
     right: -20px;
+  }
+
+}
+
+.login{
+  h1{
+    margin-top: 6px;
+    @include xs-max {
+      max-width: 260px;
+    }
+    @include sm-min {
+      margin-top: 12px;
+    }
+  }
+}
+
+.popup--info{
+  @include sm-min {
+    translate: right 0.5s;
+    right: 120px;
   }
 }

@@ -160,6 +160,15 @@ span {
   font-weight: bold;
   text-decoration: underline;
   margin-top: 20px;
+  font-size: 0.9em;
+  width: 100%;
+  display: block;
+  text-align: right;
+}
+@media (min-width: 750px) {
+  .textLink {
+    margin-top: -10px;
+  }
 }
 
 .header {
@@ -362,7 +371,7 @@ span {
   font-size: 5em;
 }
 .vote .vote__navigation {
-  display: flex;
+  display: none;
   flex-direction: column;
   margin-right: 10px;
 }
@@ -387,6 +396,7 @@ span {
 }
 .vote .vote__navigation .vote__navigation__arrow--down {
   transform: rotate(180deg);
+  display: none;
 }
 
 .post__button--comment {
@@ -435,6 +445,7 @@ span {
   margin-bottom: 10px;
 }
 .post__button--vote .post__button--vote__box .post__button--vote__arrow--down {
+  display: none;
   transform: rotate(180deg);
 }
 
@@ -537,6 +548,10 @@ span {
 }
 .post--new.active {
   display: block;
+}
+
+.post__button--vote__box + .post__button--vote__box {
+  display: none;
 }
 
 .sidebar {
@@ -706,6 +721,19 @@ span {
   text-align: center;
 }
 
+@media (max-width: 749px) {
+  .sidebar--login {
+    margin-top: 110px;
+    padding-right: 10%;
+    display: none;
+  }
+}
+@media (min-width: 750px) {
+  .sidebar--login {
+    margin-left: 3vw;
+  }
+}
+
 .main--profil {
   border: solid 5px black;
   max-width: 800px;
@@ -765,29 +793,27 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px;
-  bottom: -100%;
+  padding: 40px;
   translate: bottom 0.5s;
 }
 @media (max-width: 749px) {
   .popup {
+    position: relative;
     padding: 30px;
-    right: 20px;
-    left: 20px;
-    height: calc(100vh - 180px);
+    width: 100%;
+    margin-top: 120px;
   }
-  .popup.active {
-    bottom: 60px;
-    translate: bottom 0.5s;
+}
+@media (max-width: 320px) {
+  .popup {
+    padding: 20px 10px;
   }
 }
 @media (min-width: 750px) {
   .popup {
-    right: 120px;
-  }
-  .popup.active {
     bottom: 70px;
-    translate: bottom 0.5s;
+    translate: right 0.5s;
+    right: 120px;
   }
   .popup:after {
     content: "";
@@ -810,6 +836,12 @@ span {
   font-size: 3em;
   margin-bottom: 5px;
 }
+@media (max-width: 320px) {
+  .popup .popup__content .popup__headline {
+    font-size: 2.3em;
+    margin-bottom: 10px;
+  }
+}
 .popup .botton--close {
   cursor: pointer;
   background-image: url(cross.bc548973.png);
@@ -819,4 +851,25 @@ span {
   position: absolute;
   top: -20px;
   right: -20px;
+}
+
+.login h1 {
+  margin-top: 6px;
+}
+@media (max-width: 749px) {
+  .login h1 {
+    max-width: 260px;
+  }
+}
+@media (min-width: 750px) {
+  .login h1 {
+    margin-top: 12px;
+  }
+}
+
+@media (min-width: 750px) {
+  .popup--info {
+    translate: right 0.5s;
+    right: 120px;
+  }
 }
