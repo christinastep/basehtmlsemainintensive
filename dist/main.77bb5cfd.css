@@ -91,6 +91,8 @@ body {
   .wrapper .main {
     width: calc(100vw - (2vw + 200px));
     padding-right: 3vw;
+    display: flex;
+    justify-content: center;
   }
 }
 @media (min-width: 1024px) {
