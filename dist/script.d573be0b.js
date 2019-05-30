@@ -108,10 +108,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 document.querySelector(".button--nav").addEventListener("click", function () {
   document.querySelector(".sidebar").classList.toggle("active");
 });
-document.querySelector(".button--newPost").addEventListener("click", function () {
-  document.querySelector(".post--new").classList.toggle("active");
-  document.querySelector(".header").classList.toggle("header__newpost--open");
-});
 document.querySelector(".button--sendPost").addEventListener("click", function () {
   document.querySelector(".post--new").classList.toggle("active");
   document.querySelector(".header").classList.toggle("header__newpost--open");
@@ -146,7 +142,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61776" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51326" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

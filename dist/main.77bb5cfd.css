@@ -173,6 +173,12 @@ span {
   }
 }
 
+.login .wrapper {
+  background-image: url(pattern.5f84bca0.png);
+  height: calc(100vh - (2vw + 40px));
+  background-color: lightgrey;
+}
+
 .header {
   width: 100vw;
   padding: 1vw 3vw;
@@ -198,12 +204,19 @@ span {
   .header h1 {
     font-size: 1.8em;
     line-height: 1em;
+    margin-right: 5px;
   }
 }
 .header button {
-  padding: 5px 15px;
   transition: all 0.3s;
   cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-image: url(cross.bc548973.png);
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotate(45deg);
 }
 .header.header__newpost--open {
   height: 80vh;
@@ -281,6 +294,7 @@ span {
   height: 50px;
   border: solid 5px black;
   border-radius: 50%;
+  background-color: lightgrey;
   margin-right: 10px;
   cursor: pointer;
 }
@@ -324,7 +338,7 @@ span {
   display: flex;
   flex-direction: column;
   border-bottom: solid 5px black;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 @media (min-width: 750px) {
   .post__wrapper .post__content {
@@ -454,12 +468,9 @@ span {
 @media (min-width: 750px) {
   .post__button--vote .post__button--vote__box .post__button--vote__arrow--down {
     display: block;
-    background-image: url(screem_2.c838c593.png);
+    background-image: url(full.eaba69b7.png);
     background-size: 80%;
     background-position: center;
-    transform: translateY(10px);
-    height: calc(50px * 1);
-    width: calc(50px * 1);
   }
 }
 
@@ -545,20 +556,7 @@ span {
 }
 
 .post--new {
-  display: none;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-@media (min-width: 750px) {
-  .post--new {
-    max-width: 720px;
-    margin-left: 200px;
-  }
-}
-@media (min-width: 1024px) {
-  .post--new {
-    margin-left: 320px;
-  }
+  width: 100%;
 }
 .post--new.active {
   display: block;
@@ -571,7 +569,7 @@ span {
   position: absolute;
   display: block;
   width: 120px;
-  left: -30px;
+  left: -50px;
   bottom: -30px;
   height: 90px;
   z-index: 0;
@@ -722,6 +720,7 @@ span {
 .sidebar--profil .profilInfoBox .profilInfoBox__image {
   border-radius: 50%;
   border: solid 5px black;
+  background-color: lightgrey;
   overflow: hidden;
   width: 200px;
   position: relative;
@@ -816,7 +815,7 @@ span {
 .popup {
   position: fixed;
   border: solid 5px black;
-  background-color: lightgrey;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -825,7 +824,6 @@ span {
 }
 @media (max-width: 749px) {
   .popup {
-    display: none;
     position: relative;
     padding: 30px;
     width: 100%;
@@ -904,7 +902,7 @@ span {
 
 .post--screem {
   background-image: url(pattern.5f84bca0.png);
-  background-color: red;
+  background-color: lightgrey;
   min-height: 100vh;
 }
 .post--screem .popup {
@@ -915,5 +913,25 @@ span {
   max-width: 700px;
 }
 .post--screem .popup .popup__content .post__content__text {
+  font-size: 1.3em;
+}
+
+.cree--post {
+  background-image: url(pattern.5f84bca0.png);
+  background-color: lightgrey;
+  min-height: 100vh;
+}
+.cree--post .popup {
+  background-color: #fff;
+  width: 100%;
+  max-width: 700px;
+}
+@media (min-width: 750px) {
+  .cree--post .popup .popup__content {
+    width: 100%;
+    max-width: 700px;
+  }
+}
+.cree--post .popup .popup__content .post__content__text {
   font-size: 1.3em;
 }

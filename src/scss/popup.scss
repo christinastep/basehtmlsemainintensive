@@ -1,7 +1,7 @@
 .popup{
   position: fixed;
   border: $border--main;
-  background-color: lightgrey;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +9,6 @@
   translate: bottom 0.5s;
 
   @include xs-max {
-    display: none;
     position: relative;
     padding:30px;
     width: 100%;
@@ -94,6 +93,28 @@
     }
   }
   background-image: url(../img/pattern.png);
-  background-color: red;
+  background-color: lightgrey;
+  min-height: 100vh;
+}
+
+.cree--post{
+  .popup{
+    background-color: #fff;
+    width: 100%;
+    max-width: 700px;
+    &:after{
+    }
+    .popup__content{
+      @include sm-min {
+        width: 100%;
+        max-width: 700px;
+      }
+      .post__content__text{
+        font-size: 1.3em;
+      }
+    }
+  }
+  background-image: url(../img/pattern.png);
+  background-color: lightgrey;
   min-height: 100vh;
 }

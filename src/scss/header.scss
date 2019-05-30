@@ -18,12 +18,20 @@
     @include xs-max {
       font-size: 1.8em;
       line-height: 1em;
+      margin-right: 5px;
     }
   }
   button{
-    padding:5px 15px;
     transition: all 0.3s;
     cursor: pointer;
+    width:30px;
+    height:30px;
+    background-image: url(../img/cross.png);
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(45deg);
+    
   }
   &.header__newpost--open{
     height:80vh;

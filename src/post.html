@@ -14,63 +14,39 @@
     <header class="header">
       <div class="header__main">
         <a href="index.html"><h1>La monde est chiant, parce que ....</h1></a>
-        <button class="button button--newPost">Ajouter</button>
-        <!-- 
-          Si User est pas conecter 
-          <button class="button button--newPost">Sign In</button> 
-        -->
-      </div>
-      <div class="post--new">
-        <form action="" method="get" class="form" autocomplete="off">
-          <div class="form__field">
-            <label for="story">Enter ton chiant histoire: </label>
-            <textarea type="text" name="story" id="story" required>
-          </div>
-          <div class="form__line">
-            <label for="tags">Enter des Tags (sepere par virgule): </label>
-            <input type="text" name="tags" id="tags" required>
-          </div>
-          <div class="form__button">
-            <input type="imageupload" value="Upload un image">
-          </div>
-          <div class="form__button">
-            <input type="submit" value="Send" class="button--sendPost">
-          </div>
-        </form>
+        <a href="new.html"><button class="button button--newPost"></button></a>
       </div>
     </header>
     <button class="button--circle button--nav"></button>
     <img src="img/mec.png" alt="" class="mec hidden-xs">
     <div class="wrapper">
-    </div>
-
-    <div class="popup popup--info">
-      <a href="index.html">
-        <button class="button--circle botton--close"></button>
-      </a>
-
-      <div class="popup__content">
-        <div class="post">
-          <div class="post__wrapper">
-            <div class="post__vote vote">
-              <p class="vote__number hidden-xs">3</p>
-              <div class="vote__navigation">
-                <button class="vote__navigation__arrow vote__navigation__arrow--up"></button>
-                <button class="vote__navigation__arrow vote__navigation__arrow--down"></button>
-              </div> 
-            </div>
-            <div class="post__content">
-              <p class="post__content__text">
-                .... Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu
-              </p>
-
-              <div class="post__button--vote">
-                <div class="post__button--vote__box">
-                  <button class="post__button--vote__arrow post__button--vote__arrow--up"></button>
-                  <p class="post__button--commentCount post__button--commentCount--up">3</p>
+      <div class="popup popup--info">
+        <a href="index.html">
+          <button class="button--circle botton--close"></button>
+        </a>
+        <div class="popup__content">
+          <div class="post">
+            <div class="post__wrapper">
+              <div class="post__vote vote">
+                <p class="vote__number hidden-xs">3</p>
+                <div class="vote__navigation">
+                  <button class="vote__navigation__arrow vote__navigation__arrow--up"></button>
+                  <button class="vote__navigation__arrow vote__navigation__arrow--down"></button>
                 </div> 
               </div>
-              
+              <div class="post__content">
+                <p class="post__content__text">
+                  .... Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu
+                </p>
+
+                <div class="post__button--vote">
+                  <div class="post__button--vote__box">
+                    <button class="post__button--vote__arrow post__button--vote__arrow--up"></button>
+                    <p class="post__button--commentCount post__button--commentCount--up">3</p>
+                  </div> 
+                </div>
+                
+              </div>
             </div>
           </div>
         </div>

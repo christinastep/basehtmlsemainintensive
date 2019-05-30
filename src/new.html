@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Le monde est chiant</title>
+    <meta name="description" content="Le monde est chiant">
+    <link href="https://fonts.googleapis.com/css?family=Pirata+One&display=swap" rel="stylesheet">
+    <link href="scss/main.scss" rel="stylesheet">
+  </head>
+  <body class="accueil forum cree--post">
+    <header class="header">
+      <div class="header__main">
+        <a href="index.html"><h1>La monde est chiant, parce que ....</h1></a>  
+        <a href="new.html"><button class="button button--newPost"></button></a>
+      </div>
+    </header>
+    <button class="button--circle button--nav"></button>
+    <img src="img/mec.png" alt="" class="mec hidden-xs">
+    <div class="wrapper">
+      <div class="popup popup--info">
+        <a href="index.html">
+          <button class="button--circle botton--close"></button>
+        </a>
+        <div class="popup__content">
+          <div class="post--new">
+            <form action="" method="get" class="form" autocomplete="off">
+              <div class="form__field">
+                <label for="story">Enter ton chiant histoire: </label>
+                <textarea type="text" name="story" id="story" required>
+              </div>
+              <div class="form__line">
+                <label for="tags">Enter des Tags (sepere par virgule): </label>
+                <input type="text" name="tags" id="tags" required>
+              </div>
+              <div class="form__line">
+                <label for="image">Enter des link pour le image: </label>
+                <input type="text" name="image" id="image" required>
+              </div>
+              <div class="form__button">
+                <input type="submit" value="Send" class="button--sendPost">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+

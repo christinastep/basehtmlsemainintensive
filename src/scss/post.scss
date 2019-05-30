@@ -56,6 +56,7 @@
       height:50px;
       border: $border--main;
       border-radius:50%;
+      background-color: lightgrey;
       margin-right: 10px;
       cursor: pointer;
       img{
@@ -101,7 +102,7 @@
     display: flex;
     flex-direction: column;
     border-bottom: $border--main;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     .post__content__image{
       width: 80%;
       margin-top: 30px;
@@ -224,15 +225,15 @@
         display: none;
         @include sm-min {
           display: block;
-          background-image: url(../img/screem_2.png);
+          background-image: url(../img/full.png);
           // transform: rotate(180deg);
           background-size: 80%;
           background-position: center;
           // border-radius: 50%;
           // border: $border--main;
-          transform: translateY(10px);
-          height:calc(50px * 1);
-          width:calc(50px * 1);
+          // transform: translateY(10px);
+          // height:calc(50px * 1);
+          // width:calc(50px * 1);
         }
       }
     }
@@ -327,16 +328,13 @@
 
 
 .post--new{
-  display: none;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  width: 100%;
   @include sm-min {
-    max-width: 720px;
-    margin-left:200px;
+    // max-width: 720px;
+    // margin-left:200px;
   }
 
   @include lg-min {
-    margin-left: 320px;
   }
   
   &.active{
@@ -355,7 +353,7 @@
       position: absolute;
       display: block;
       width:120px;
-      left:-30px;
+      left:-50px;
       bottom: -30px;
       height:90px;
       z-index: 0;

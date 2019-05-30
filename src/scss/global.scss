@@ -100,3 +100,11 @@ span{
     margin-top: -10px;
   }
 }
+
+.login{
+  .wrapper{
+    background-image: url(../img/pattern.png);
+    height:calc(100vh - (2vw + 40px));
+    background-color: lightgrey;
+  }
+}
