@@ -196,7 +196,7 @@ span {
 }
 @media (max-width: 749px) {
   .header h1 {
-    font-size: 1.9em;
+    font-size: 1.8em;
     line-height: 1em;
   }
 }
@@ -324,7 +324,7 @@ span {
   display: flex;
   flex-direction: column;
   border-bottom: solid 5px black;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 @media (min-width: 750px) {
   .post__wrapper .post__content {
@@ -429,7 +429,12 @@ span {
 }
 .post__button--vote .post__button--vote__box {
   display: flex;
+  align-items: center;
   margin-left: 10px;
+  margin-top: 0px;
+}
+.post__button--vote .post__button--vote__box .post__button--commentCount--down {
+  display: none;
 }
 .post__button--vote .post__button--vote__box .post__button--vote__arrow {
   cursor: pointer;
@@ -443,12 +448,19 @@ span {
   width: calc(30px * 1);
   margin-right: 5px;
 }
-.post__button--vote .post__button--vote__box .post__button--vote__arrow--up {
-  margin-bottom: 10px;
-}
 .post__button--vote .post__button--vote__box .post__button--vote__arrow--down {
   display: none;
-  transform: rotate(180deg);
+}
+@media (min-width: 750px) {
+  .post__button--vote .post__button--vote__box .post__button--vote__arrow--down {
+    display: block;
+    background-image: url(screem_2.c838c593.png);
+    background-size: 80%;
+    background-position: center;
+    transform: translateY(10px);
+    height: calc(50px * 1);
+    width: calc(50px * 1);
+  }
 }
 
 .comment {
@@ -552,7 +564,20 @@ span {
   display: block;
 }
 
-.post__button--vote__box + .post__button--vote__box {
+.post__button--vote__box--screen {
+  position: relative;
+}
+.post__button--vote__box--screen:hover .screem--hover {
+  position: absolute;
+  display: block;
+  width: 120px;
+  left: -30px;
+  bottom: -30px;
+  height: 90px;
+  z-index: 0;
+}
+.post__button--vote__box--screen .screem--hover {
+  position: absolute;
   display: none;
 }
 
@@ -800,6 +825,7 @@ span {
 }
 @media (max-width: 749px) {
   .popup {
+    display: none;
     position: relative;
     padding: 30px;
     width: 100%;
@@ -874,4 +900,20 @@ span {
     translate: right 0.5s;
     right: 120px;
   }
+}
+
+.post--screem {
+  background-image: url(pattern.5f84bca0.png);
+  background-color: red;
+  min-height: 100vh;
+}
+.post--screem .popup {
+  background-color: #fff;
+}
+.post--screem .popup .popup__content {
+  width: 100%;
+  max-width: 700px;
+}
+.post--screem .popup .popup__content .post__content__text {
+  font-size: 1.3em;
 }

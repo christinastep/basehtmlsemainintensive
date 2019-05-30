@@ -101,7 +101,7 @@
     display: flex;
     flex-direction: column;
     border-bottom: $border--main;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     .post__content__image{
       width: 80%;
       margin-top: 30px;
@@ -200,7 +200,12 @@
   right:0;
   .post__button--vote__box{
     display: flex;
+    align-items: center;
     margin-left: 10px;
+    margin-top: 0px;
+    .post__button--commentCount--down{
+      display: none;
+    }
     .post__button--vote__arrow{
       cursor: pointer;
       display: block;
@@ -213,11 +218,22 @@
       width:calc(30px * 1);
       margin-right: 5px;
       &--up{
-        margin-bottom: 10px;
+        //margin-bottom: 10px;
       }
       &--down{
         display: none;
-        transform: rotate(180deg);
+        @include sm-min {
+          display: block;
+          background-image: url(../img/screem_2.png);
+          // transform: rotate(180deg);
+          background-size: 80%;
+          background-position: center;
+          // border-radius: 50%;
+          // border: $border--main;
+          transform: translateY(10px);
+          height:calc(50px * 1);
+          width:calc(50px * 1);
+        }
       }
     }
   }
@@ -328,7 +344,25 @@
   }
 }
 
-.post__button--vote__box + .post__button--vote__box{
-  display: none;
-}
+// .post__button--vote__box + .post__button--vote__box{
+//   display: none;
+// }
 
+.post__button--vote__box--screen{
+  position: relative;
+  &:hover{
+    .screem--hover{
+      position: absolute;
+      display: block;
+      width:120px;
+      left:-30px;
+      bottom: -30px;
+      height:90px;
+      z-index: 0;
+    }
+  }
+  .screem--hover{
+    position: absolute;
+    display: none;
+  }
+}

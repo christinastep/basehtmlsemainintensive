@@ -8,9 +8,8 @@
   padding:40px;
   translate: bottom 0.5s;
 
- 
-
   @include xs-max {
+    display: none;
     position: relative;
     padding:30px;
     width: 100%;
@@ -78,4 +77,23 @@
     translate: right 0.5s;
     right: 120px;
   }
+}
+
+
+.post--screem{
+  .popup{
+    background-color: #fff;
+    &:after{
+    }
+    .popup__content{
+      width: 100%;
+      max-width: 700px;
+      .post__content__text{
+        font-size: 1.3em;
+      }
+    }
+  }
+  background-image: url(../img/pattern.png);
+  background-color: red;
+  min-height: 100vh;
 }

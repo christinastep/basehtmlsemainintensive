@@ -13,6 +13,6 @@
     document.querySelector(".header").classList.toggle("header__newpost--open");
   });
 
-  document.querySelector(".botton--close").addEventListener("click", function(){
+  document.querySelector(".button--close--alert").addEventListener("click", function(){
     document.querySelector(".popup--info").style.right = "-500px";
   });
